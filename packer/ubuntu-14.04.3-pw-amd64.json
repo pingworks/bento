@@ -44,6 +44,7 @@
       "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
       "type": "virtualbox-iso",
+      "headless": true,
       "vboxmanage": [
         [
           "modifyvm",
@@ -101,6 +102,7 @@
       "ssh_wait_timeout": "10000s",
       "tools_upload_flavor": "linux",
       "type": "vmware-iso",
+      "headless": true,
       "vm_name": "packer-ubuntu-14.04-amd64",
       "vmx_data": {
         "cpuid.coresPerSocket": "2",
@@ -148,6 +150,7 @@
       "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
       "type": "parallels-iso",
+      "headless": true,
       "prlctl": [
         [
           "set",
