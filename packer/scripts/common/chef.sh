@@ -185,6 +185,17 @@ do_download() {
 
 if [ x$CHEF_VERSION != x'provisionerless' ]; then
   do_download "$chef_installer_url" "$chef_installer"
+  cat $chef_installer | \
+    sed -e 's;\(download_url=`awk ..1 == .url. { print .2 }. ..metadata_filename..\);\1__X__;g' | \
+    sed -e $'s;__X__;\\\n__X__;g' | \
+    sed -e "s;__X__;download_url=\\\`echo \\\$download_url \\| sed -e \\'s/https/http/\\'\\\`;g" \
+    > /tmp/install-chef.sh.new
+
+  echo "DEBUG ----------------------------------------------------------"
+  cat /tmp/install-chef.sh.new
+  echo "DEBUG ----------------------------------------------------------"
+  cat /tmp/install-chef.sh.new > $chef_installer
+
   chmod +x $chef_installer
   if [ x$CHEF_VERSION == x'latest' ]; then
     $chef_installer
