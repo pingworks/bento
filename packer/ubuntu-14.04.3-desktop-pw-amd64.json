@@ -189,7 +189,7 @@
   ],
   "post-processors": [
     {
-      "output": "../builds/{{.Provider}}/pingworks_ubuntu-14.04_chef-{{user `chef_version`}}-{{user `box_version_major`}}.{{user `box_version_minor`}}.{{user `box_version_buildnumber`}}.box",
+      "output": "../builds/{{.Provider}}/pingworks_ubuntu-14.04-desktop_chef-{{user `chef_version`}}-{{user `box_version_major`}}.{{user `box_version_minor`}}.{{user `box_version_buildnumber`}}.box",
       "type": "vagrant"
     }
   ],
