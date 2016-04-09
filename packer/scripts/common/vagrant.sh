@@ -10,3 +10,6 @@ wget --no-check-certificate \
     -O ~vagrant/.ssh/id_rsa
 chown -R vagrant ~vagrant/.ssh
 chmod -R go-rwsx ~vagrant/.ssh
+
+mkdir ~vagrant/workspace
+chown vagrant.vagrant ~vagrant/workspace
