@@ -3,7 +3,7 @@
     "box_version_major": "1",
     "box_version_minor": "0",
     "box_version_buildnumber": "{{env `BOX_VERSION_BUILDNUMBER`}}",
-    "chef_version": "12.7.2-1",
+    "chef_version": "12.8.1-1",
     "mirror": "http://de.archive.ubuntu.com/ubuntu-releases"
   },
   "builders": [
