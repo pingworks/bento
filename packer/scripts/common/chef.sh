@@ -205,6 +205,10 @@ if [ x$CHEF_VERSION != x'provisionerless' ]; then
     $chef_installer -v $CHEF_VERSION
   fi
   rm -f $chef_installer
+
+  # Linking chef-solo binary
+  ln -s /opt/chef/bin/chef-solo /bin/chef-solo
+
 else
   echo "Building a box without Chef"
 fi
