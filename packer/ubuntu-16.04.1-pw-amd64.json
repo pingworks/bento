@@ -53,7 +53,7 @@
           "modifyvm",
           "{{.Name}}",
           "--nictype1",
-          "virtio"
+          "82545EM"
         ],[
           "modifyvm",
           "{{.Name}}",
